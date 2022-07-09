@@ -3,7 +3,7 @@ description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -31,10 +31,13 @@ dependencies:
     sdk: flutter
   intl: ^0.17.0
 
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+
+  # firebase
+  firebase_core: ^1.19.1
+  firebase_database: ^9.0.18
 
 dev_dependencies:
   flutter_test:
@@ -60,7 +63,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   fonts:
-    - family: EF_Diary
+    - family: Diary
       fonts:
         - asset: assets/font/EF_Diary.ttf
         - asset: assets/font/EF_Diary.ttf
@@ -71,6 +74,14 @@ flutter:
       fonts:
         - asset: assets/font/Shilla/Shilla_Culture(M).ttf
         - asset: assets/font/Shilla/Shilla_Culture(B).ttf
+          weight: 700
+    - family: Nanum
+      fonts:
+        - asset: assets/font/NanumSquare_acR.ttf
+    - family: Noto
+      fonts:
+        - asset: assets/font/NotoSans/NotoSansKR-Regular.otf
+        - asset: assets/font/NotoSans/NotoSansKR-Medium.otf
           weight: 700
   # To add assets to your application, add an assets section, like this:
   # assets:
@@ -92,13 +103,13 @@ flutter:
 #    - family: EF_Diary
 #      fonts:
 #        - assets: assets/fonts/Schyler-Regular.ttf
-  #       - assets: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - assets: fonts/TrajanPro.ttf
-  #       - assets: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
+#       - assets: fonts/Schyler-Italic.ttf
+#         style: italic
+#   - family: Trajan Pro
+#     fonts:
+#       - assets: fonts/TrajanPro.ttf
+#       - assets: fonts/TrajanPro_Bold.ttf
+#         weight: 700
+#
+# For details regarding fonts from package dependencies,
+# see https://flutter.dev/custom-fonts/#from-packages

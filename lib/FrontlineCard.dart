@@ -36,12 +36,12 @@ class FrontlineCard extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            child: Text(date, style: TextStyle(fontSize: 18)),
+            child: Text(date, style: TextStyle(fontSize: 18, color: Colors.black)),
             margin: EdgeInsets.fromLTRB(2.0, 30.0, 0.0, 0.0),
           ),
           Container(
-            child: Text(frontline, style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: color)),
-            margin: EdgeInsets.fromLTRB(2.0, 40.0, 0.0, 0.0),
+            child: Text(frontline, style: TextStyle(fontSize: 28, color: color, fontFamily: 'shilla' )),
+            margin: EdgeInsets.fromLTRB(2.0, 20.0, 0.0, 0.0),
           )
         ],
       ),
