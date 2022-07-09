@@ -5,18 +5,21 @@ class FrontlineCard extends StatelessWidget {
       {Key? key,
         required String this.date,
         required double this.opacity,
-        required String this.frontline}) : super(key: key);
+        required String this.frontline,
+        required Color? this.color,
+        }) : super(key: key);
 
   final date;
   final opacity;
   final frontline;
+  final color;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
       width: 400,
-      height: 200,
+      height: 180,
       decoration: BoxDecoration(
         // color: Colors.white54,
           color: Color.fromRGBO(255, 255, 255, opacity),
@@ -33,12 +36,12 @@ class FrontlineCard extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            child: Text(date, style: TextStyle(fontSize: 20)),
-            margin: EdgeInsets.fromLTRB(2.0, 20.0, 0.0, 0.0),
+            child: Text(date, style: TextStyle(fontSize: 18)),
+            margin: EdgeInsets.fromLTRB(2.0, 30.0, 0.0, 0.0),
           ),
           Container(
-            child: Text(frontline, style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-            margin: EdgeInsets.fromLTRB(2.0, 50.0, 0.0, 0.0),
+            child: Text(frontline, style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: color)),
+            margin: EdgeInsets.fromLTRB(2.0, 40.0, 0.0, 0.0),
           )
         ],
       ),

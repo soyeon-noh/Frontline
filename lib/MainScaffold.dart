@@ -18,13 +18,21 @@ class MainScaffold extends StatelessWidget {
     return formatDate;
   }
 
-  String getFrontline(){
+  String getFrontline(int num){
 
     var date = getDate(0);
-    var list = ['봉인된 바위섬\n(제압전)', '영광의 평원\n(쇄빙전)', '온살 하카이르\n(계절끝 합전)', '숨겨진 보루\n(기공전)'];
+    print(date);
 
-    if(get.)
-    return '';
+    var list = ['봉인된 바위섬 (제압전)', '영광의 평원 (쇄빙전)', '온살 하카이르 (계절끝 합전)', '숨겨진 보루 (기공전)'];
+
+    var now = new DateTime.now();
+    // var newDate = new DateTime(now.year, now.month, now.day + num);
+
+    if(num <0){
+      num = 3;
+    }
+
+    return list[num];
   }
 
   @override
@@ -47,9 +55,10 @@ class MainScaffold extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  FrontlineCard(date: getDate(-1), opacity: 0.5, frontline: getFrontline()),
-                  FrontlineCard(date: getDate(0), opacity: 0.8, frontline: getFrontline()),
-                  FrontlineCard(date: getDate(1), opacity: 0.5, frontline: getFrontline())
+                  FrontlineCard(date: getDate(-1), opacity: 0.5, frontline: getFrontline(-1), color: null,),
+                  FrontlineCard(date: getDate(0), opacity: 0.8, frontline: getFrontline(0), color: Color.fromRGBO(
+                      215, 18, 18, 1.0)),
+                  FrontlineCard(date: getDate(1), opacity: 0.5, frontline: getFrontline(1), color: null,)
                 ],
               ),
             ),
