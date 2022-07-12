@@ -46,20 +46,24 @@ class MainBody extends StatelessWidget {
         children: [
           FrontlineCard(
             date: getDate(-1),
-            opacity: 0.5,
+            opacity: 0.3,
             frontline: getFrontline(-1),
-            color: Colors.black,
+            dateColor: Colors.white,
+            frontlineColor: Colors.white,
           ),
           FrontlineCard(
               date: getDate(0),
-              opacity: 0.8,
+              opacity: 1,
               frontline: getFrontline(0),
-              color: Color.fromRGBO(215, 18, 18, 1.0)),
+              dateColor: Colors.black,
+              frontlineColor: Colors.black,
+          ),
           FrontlineCard(
             date: getDate(1),
-            opacity: 0.5,
+            opacity: 0.3,
             frontline: getFrontline(1),
-            color: Colors.black,
+            dateColor: Colors.white,
+            frontlineColor : Colors.white,
           )
         ],
       ),

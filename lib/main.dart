@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:frontline/frontline/SealRock.dart';
-// import 'package:intl/date_symbol_data_http_request.dart';
+
 import 'MainBody.dart';
-import 'frontline/SealRock.dart';
+import 'MainDrawer.dart';
 
 // firebase
 import 'package:firebase_core/firebase_core.dart';
@@ -13,12 +12,18 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  runApp(const MyApp(bodyWidget: MainBody(),));
 }
 
 // stless
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({
+    Key? key,
+    required Widget this.bodyWidget,
+  }) : super(key: key);
+
+  final bodyWidget;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,7 +31,8 @@ class MyApp extends StatelessWidget {
             // fontFamily: 'EF_Diary',
             fontFamily: 'Shilla',
             textTheme: TextTheme(
-              bodyText1: TextStyle(color: Color.fromRGBO(215, 18, 18, 1.0), fontSize: 28.0),
+              bodyText1: TextStyle(
+                  color: Color.fromRGBO(215, 18, 18, 1.0), fontSize: 28.0),
               bodyText2: TextStyle(
                   color: Colors.white, fontSize: 18.0, fontFamily: 'Noto'),
             )),
@@ -49,57 +55,8 @@ class MyApp extends StatelessWidget {
           ),
           // extendBodyBehindAppBar: true,
           // body: MainBody(),
-          body: MainBody(),
-          drawer: Drawer(
-            child: ListView(
-              padding: EdgeInsets.zero,
-              children: [
-                DrawerHeader(
-                  child: Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Container(
-                      margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
-                      child: Text("pvp 리스트")
-                    )
-                  ),
-                  decoration: BoxDecoration(color: Colors.black54),
-                ),
-                ListTile(
-                    leading: Icon(Icons.home),
-                    iconColor: Colors.grey[850],
-                    title: Text('오늘 전장',style: Theme.of(context).textTheme.bodyText1),
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SealRock()));
-                    }
-                ),                
-                ListTile(
-                    leading: Icon(Icons.keyboard_arrow_right_rounded),
-                    iconColor: Colors.grey[850],
-                    title: Text('봉인된 바위섬', style: Theme.of(context).textTheme.bodyText1),
-                    onTap: () {
-                      // Navigator.pop(context, MaterialPageRoute(builder: (context)=>SealRock()));
-                    }
-                ),
-                ListTile(
-                    leading: Icon(Icons.keyboard_arrow_right_rounded),
-                    iconColor: Colors.grey[850],
-                    title: Text('영광의 평원', style: Theme.of(context).textTheme.bodyText1),
-                    onTap: () {
-                      // Navigator.pop(context);
-                    }
-                ),
-                ListTile(
-                    leading: Icon(Icons.keyboard_arrow_right_rounded),
-                    iconColor: Colors.grey[850],
-                    title: Text('온살 하카이르', style: Theme.of(context).textTheme.bodyText1),
-                    
-                    onTap: () {
-                      // Navigator.pop(context);
-                    }
-                ),                                
-              ],
-            ),
-          ),
+          body: bodyWidget,
+          drawer: MainDrawer(),
         ));
   }
 }
