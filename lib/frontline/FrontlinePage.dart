@@ -22,16 +22,14 @@ class FrontlinePage extends StatelessWidget {
                 margin: EdgeInsets.fromLTRB(0, 40, 0, 20),
                 child:
                 Text(
-                  "봉인된 바위섬",
+                  frontlineTitle,
                   style: TextStyle(color: Colors.red,fontSize: 50, fontFamily: 'Shilla'),
                 )
             ),
 
             Column(
               children: [
-
                 Container(
-
                   margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
                   child: Column(
                     children: [
