@@ -26,7 +26,7 @@ class MainBody extends StatelessWidget {
     var list = [
       '영광의 평원 (쇄빙전)',
       '온살 하카이르 (계절끝 합전)',
-      '숨겨진 보루 (기공전)',
+      '외곽 유적지대 (제압전)',
       '봉인된 바위섬 (쟁탈전)',
     ];
 

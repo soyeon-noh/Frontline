@@ -4,6 +4,7 @@ import 'package:frontline/MainDrawerItem.dart';
 import 'package:frontline/frontline/OnsalHakair.dart';
 import 'package:frontline/frontline/SealRock.dart';
 import 'package:frontline/frontline/TheFieldsOfGlory.dart';
+import 'package:frontline/frontline/TheBorderlandRuins.dart';
 import 'main.dart';
 
 class MainDrawer extends StatelessWidget {
@@ -35,17 +36,21 @@ class MainDrawer extends StatelessWidget {
                 icon: Icons.home,
                 onPressed: () => onItemPressed(context, index: 0)),
             MainDrawerItem(
-                name: '봉인된 바위섬',
+                name: '외곽 유적지대',
                 icon: Icons.home,
                 onPressed: () => onItemPressed(context, index: 1)),
             MainDrawerItem(
-                name: '영광의 평원',
+                name: '봉인된 바위섬',
                 icon: Icons.home,
                 onPressed: () => onItemPressed(context, index: 2)),
             MainDrawerItem(
-                name: '온살 하카이르',
+                name: '영광의 평원',
                 icon: Icons.home,
                 onPressed: () => onItemPressed(context, index: 3)),
+            MainDrawerItem(
+                name: '온살 하카이르',
+                icon: Icons.home,
+                onPressed: () => onItemPressed(context, index: 4)),
           ],
         ),
       ),
@@ -62,13 +67,17 @@ class MainDrawer extends StatelessWidget {
         break;
       case 1:
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const MyApp(bodyWidget: SealRock())));
+            context, MaterialPageRoute(builder: (context) => const MyApp(bodyWidget: TheBorderlandRuins())));
         break;
       case 2:
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const MyApp(bodyWidget: TheFieldsOfGlory())));
+            context, MaterialPageRoute(builder: (context) => const MyApp(bodyWidget: SealRock())));
         break;
       case 3:
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => const MyApp(bodyWidget: TheFieldsOfGlory())));
+        break;
+      case 4:
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => const MyApp(bodyWidget: OnsalHakair())));
         break;      

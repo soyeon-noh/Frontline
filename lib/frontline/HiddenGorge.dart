@@ -15,7 +15,7 @@ class HiddenGorge extends StatelessWidget {
                 margin: EdgeInsets.fromLTRB(0, 40, 0, 20),
                 child:
                 Text(
-                  "봉인된 바위섬",
+                  "영광의 평원",
                   style: TextStyle(color: Colors.red,fontSize: 50, fontFamily: 'Shilla'),
                 )
             ),
@@ -31,16 +31,23 @@ class HiddenGorge extends StatelessWidget {
                 FrontlinePageContent(
                   title:"점령 점수",
                   infoList: [
-                    ["B","80점","(2점/3초)"],
-                    ["A","120점","(3점/3초)"],
-                    ["S","160점","(4점/3초)"]
+                    ["1개","(2점/3초)"],
+                    ["2개","(4점/3초)"],
+                    ["3개","(8점/3초)"]
                   ],
                 ),
                 FrontlinePageContent(
                   title:"킬 점수",
                   infoList: [
-                    ["우리 총사", "+5점"],
+                    ["우리 총사", "+10점"],
                     ["적 총사", "-5점"]
+                  ],
+                ),
+                FrontlinePageContent(
+                  title:"얼음 점수",
+                  infoList: [
+                    ["큰 얼음","300점"],
+                    ["작은 얼음","70점"],
                   ],
                 ),
               ],

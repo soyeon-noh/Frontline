@@ -19,7 +19,7 @@ class FrontlinePageContentItem extends StatelessWidget {
               style: Theme
               .of(context)
               .textTheme
-              .bodyText2)
+              .bodyText2),
       ],
     );
   }

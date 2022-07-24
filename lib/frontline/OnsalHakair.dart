@@ -15,10 +15,14 @@ class OnsalHakair extends StatelessWidget {
             Container(
                 margin: EdgeInsets.fromLTRB(0, 40, 0, 20),
                 child:
-                Text(
-                  "온살 하카이르",
-                  style: TextStyle(color: Colors.red,fontSize: 50, fontFamily: 'Shilla'),
-                )
+                  Column(
+                    children: [
+                      Text(
+                        "온살 하카이르",
+                        style: TextStyle(color: Colors.red,fontSize: 50, fontFamily: 'Shilla'),
+                      ),
+                    ],
+                  )
             ),
 
             Column(

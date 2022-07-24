@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         // home: MainScaffold(),
         home: Scaffold(
           backgroundColor: Colors.black87,
-
+          resizeToAvoidBottomInset: false, // BOTTOM OVERFLOW 허용
           appBar: AppBar(
             title: Text(
               "전장 가자",
@@ -55,7 +55,9 @@ class MyApp extends StatelessWidget {
           ),
           // extendBodyBehindAppBar: true,
           // body: MainBody(),
-          body: bodyWidget,
+          body: SingleChildScrollView(
+            child: bodyWidget,
+          ),
           drawer: MainDrawer(),
         ));
   }

@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:frontline/frontline/FrontlinePageContent.dart';
 
 //stl
-class TheFieldsOfGlory extends StatelessWidget {
-  const TheFieldsOfGlory({Key? key}) : super(key: key);
+class TheBorderlandRuins extends StatelessWidget {
+  const TheBorderlandRuins({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
         color: Colors.black,
+
         child: Column(
           children: [
             // title
@@ -16,7 +17,7 @@ class TheFieldsOfGlory extends StatelessWidget {
                 margin: EdgeInsets.fromLTRB(0, 40, 0, 20),
                 child:
                 Text(
-                  "영광의 평원",
+                  "외곽 유적지대",
                   style: TextStyle(color: Colors.red,fontSize: 50, fontFamily: 'Shilla'),
                 )
             ),
@@ -26,29 +27,33 @@ class TheFieldsOfGlory extends StatelessWidget {
                 FrontlinePageContent(
                   title: "승리 조건",
                   infoList: [
-                    ["점령 점 + 킬 점수 + 얼음 점수", "1600점"],
+                    ["점령 점 + 킬 점수 + 마물 점수", "1600점"],
                   ],
                 ),
                 FrontlinePageContent(
                   title:"점령 점수",
                   infoList: [
-                    ["1개","(2점/3초)"],
-                    ["2개","(4점/3초)"],
-                    ["3개","(8점/3초)"]
+                    ["1개","(1점/3초)"],
+                    ["2개","(2점/3초)"],
+                    ["3개","(4점/3초)"],
+                    ["4개","(8점/3초)"],
+                    ["5개","(16점/3초)"],
+                    ["6개","(32점/3초)"],
+                    ["깃발 내리기","+10점"],
+                    ["깃발 올리기","+10점"],
                   ],
                 ),
                 FrontlinePageContent(
                   title:"킬 점수",
                   infoList: [
-                    ["우리 총사", "+10점"],
                     ["적 총사", "-5점"]
                   ],
                 ),
                 FrontlinePageContent(
-                  title:"얼음 점수",
+                  title:"마물 점수",
                   infoList: [
-                    ["큰 얼음", "300점"],
-                    ["작은 얼음", "70점"]
+                    ["요격 시스템","248~249점"],
+                    ["요격기","25점"],
                   ],
                 ),
               ],
