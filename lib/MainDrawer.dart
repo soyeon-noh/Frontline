@@ -37,19 +37,19 @@ class MainDrawer extends StatelessWidget {
                 onPressed: () => onItemPressed(context, index: 0)),
             MainDrawerItem(
                 name: '외곽 유적지대',
-                icon: Icons.home,
+                icon: Icons.chevron_right,
                 onPressed: () => onItemPressed(context, index: 1)),
             MainDrawerItem(
                 name: '봉인된 바위섬',
-                icon: Icons.home,
+                icon: Icons.chevron_right,
                 onPressed: () => onItemPressed(context, index: 2)),
             MainDrawerItem(
                 name: '영광의 평원',
-                icon: Icons.home,
+                icon: Icons.chevron_right,
                 onPressed: () => onItemPressed(context, index: 3)),
             MainDrawerItem(
                 name: '온살 하카이르',
-                icon: Icons.home,
+                icon: Icons.chevron_right,
                 onPressed: () => onItemPressed(context, index: 4)),
           ],
         ),

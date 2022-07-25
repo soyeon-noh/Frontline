@@ -14,14 +14,24 @@ class MainDrawerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Icon(
-        icon,
-        size: 20,
-        color: Colors.white,
+    return Container(
+      // margin: EdgeInsets.only(bottom: 10,
+      decoration: BoxDecoration(
+        border: new Border(
+          bottom: new BorderSide(color: Colors.white24),
+        ),
       ),
-      title: Text(name, style: TextStyle(fontSize: 20, color: Colors.white)),
-      onTap: onPressed,
+
+      child: ListTile(
+          contentPadding: EdgeInsets.only(left: 40),
+          leading: Icon(
+            icon,
+            size: 20,
+            color: Colors.white,
+          ),
+        title: Text(name, style: TextStyle(fontSize: 20, color: Colors.white)),
+        onTap: onPressed,
+      ),
     );
   }
 }
